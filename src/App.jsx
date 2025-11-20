@@ -17,12 +17,15 @@ class SoundButtonModel {
 
 // Lista de botões (você só altera os assets)
 const SOUND_BUTTONS = [
-  new SoundButtonModel("laugh", "Risada", "/sounds/clap.mp3"),
-  new SoundButtonModel("applause", "Aplausos", "/sounds/aplausos.mp3"),
-  new SoundButtonModel("scream", "Grito", "/sounds/grito.mp3"),
-  new SoundButtonModel("boom", "Explosão", "/sounds/boom.mp3"),
-  new SoundButtonModel("horn", "Corneta", "/sounds/corneta.mp3"),
-  new SoundButtonModel("drumroll", "Rufar de Tambores", "/sounds/drumroll.mp3"),
+  new SoundButtonModel("acordando-na-epoca", "Acordando na época", "/sounds/acordando-na-epoca.mp3"),
+  new SoundButtonModel("cena-calvario", "Cena Calvário", "/sounds/cena-calvario.mp3"),
+  new SoundButtonModel("cena-cruz", "Cena Cruz", "/sounds/cena-cruz.mp3"),
+  new SoundButtonModel("comico-farao", "Cômico Faraó", "/sounds/comico-farao.mp3"),
+  new SoundButtonModel("intro-cena-1", "Intro Cena 1", "/sounds/intro-cena-1.mp3"),
+  new SoundButtonModel("jesus-calvario", "Jesus Calvario", "/sounds/jesus-calvario.mp3"),
+  new SoundButtonModel("jesus-no-templo", "Jesus no Templo", "/sounds/jesus-no-templo.mp3"),
+  new SoundButtonModel("milagre-do-casamento", "Milagre do Casamento", "/sounds/milagre-do-casamento.mp3"),
+  new SoundButtonModel("musica-da-epoca", "Música da Época", "/sounds/musica-de-epoca.mp3"),
 ];
 
 function App() {
@@ -46,6 +49,7 @@ function App() {
       // Começar a tocar
       audio.currentTime = 0;
       audio.play();
+      audio.loop = true;
 
       setPlayingMap((prev) => ({
         ...prev,
@@ -61,13 +65,38 @@ function App() {
       };
     } else {
       // Parar o som
-      audio.pause();
-      audio.currentTime = 0;
+      // Fade out gradual
+      const fadeOutDuration = 2500; // duração do fade out em ms
+      const fadeOutSteps = 20;
+      const fadeOutInterval = fadeOutDuration / fadeOutSteps;
+      const volumeDecrement = audio.volume / fadeOutSteps;
+
+      const fadeOut = setInterval(() => {
+        if (audio.volume > volumeDecrement) {
+          audio.volume = Math.max(0, audio.volume - volumeDecrement);
+        } else {
+          audio.volume = 0;
+          clearInterval(fadeOut);
+          audio.pause();
+          audio.currentTime = 0;
+          audio.volume = 1; // Restaura o volume para próxima vez
+        }
+      }, fadeOutInterval);
+
       setPlayingMap((prev) => ({
         ...prev,
         [id]: false,
       }));
-    }
+
+      return; // Não executa o pause imediato abaixo
+    //   audio.pause();
+    //   audio.currentTime = 0;
+    //   setPlayingMap((prev) => ({
+    //     ...prev,
+    //     [id]: false,
+    //   }));
+    // }
+  };
   };
 
   return (
