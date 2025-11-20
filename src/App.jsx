@@ -8,10 +8,11 @@ class SoundButtonModel {
    * @param {string} name  texto do botão
    * @param {string} asset caminho do arquivo de áudio
    */
-  constructor(id, name, asset) {
+  constructor(id, name, asset, scene) {
     this.id = id;
     this.name = name;
     this.asset = asset;
+    this.scene = scene;
   }
 }
 
@@ -26,6 +27,7 @@ const SOUND_BUTTONS = [
   new SoundButtonModel("jesus-no-templo", "Jesus no Templo", "/sounds/jesus-no-templo.mp3"),
   new SoundButtonModel("milagre-do-casamento", "Milagre do Casamento", "/sounds/milagre-do-casamento.mp3"),
   new SoundButtonModel("musica-da-epoca", "Música da Época", "/sounds/musica-de-epoca.mp3"),
+  new SoundButtonModel("estalagem", "Estalagem", "/sounds/estalagem.mp3"),
 ];
 
 function App() {
