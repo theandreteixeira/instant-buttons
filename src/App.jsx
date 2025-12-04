@@ -21,18 +21,18 @@ const SOUND_BUTTONS = [
   new SoundButtonModel("introducao-natal", "Introdução Natal", "/sounds/intro-cena-1.mp3"),
   new SoundButtonModel("acordando-na-epoca", "Acordando na época", "/sounds/acordando-na-epoca.mp3"),
   new SoundButtonModel("anjo-aparece-maria", "Anjo Aparece Maria", "/sounds/anjo-aparece-maria.mp3"),
+  new SoundButtonModel("procurando-quarto", "Procurando Quarto", "/sounds/procurando-quarto.mp3"),
   new SoundButtonModel("estalagem", "Estalagem", "/sounds/estalagem.mp3"),
+  new SoundButtonModel("criancas-brincando", "Crianças Brincando", "/sounds/criancas-brincando.mp3"),
   new SoundButtonModel("jesus--ensinando-no-templo", "Jesus ensina no Templo", "/sounds/jesus-no-templo.mp3"),
   new SoundButtonModel("musica-casamento", "Música Casamento", "/sounds/musica-casamento.mp3"),
   new SoundButtonModel("milagre-do-casamento", "Milagre do Casamento", "/sounds/milagre-do-casamento.mp3"),
   new SoundButtonModel("tempestade", "Tempestade", "/sounds/tempestade.mp3"),
   new SoundButtonModel("ventos", "Ventos", "/sounds/ventos.mp3"),
   new SoundButtonModel("jesus-aparece-na-agua", "Jesus Aparece na Água", "/sounds/jesus-aparece-na-agua.mp3"),
-  new SoundButtonModel("musica-da-epoca", "Música da Época", "/sounds/musica-de-epoca.mp3"),
+  new SoundButtonModel("santa-ceia", "Santa Ceia", "/sounds/santa-ceia.mp3"),
   new SoundButtonModel("jesus-calvario", "Jesus orando no Getsêmani", "/sounds/jesus-calvario.mp3"),
-  new SoundButtonModel("cena-calvario", "Cena Calvário", "/sounds/cena-calvario.mp3"),
   new SoundButtonModel("cena-cruz", "Cena Cruz", "/sounds/cena-cruz.mp3"),
-  new SoundButtonModel("comico-farao", "Cômico Faraó", "/sounds/comico-farao.mp3"),
 ];
 
 function App() {
