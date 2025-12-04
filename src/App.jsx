@@ -28,6 +28,7 @@ const SOUND_BUTTONS = [
   new SoundButtonModel("milagre-do-casamento", "Milagre do Casamento", "/sounds/milagre-do-casamento.mp3"),
   new SoundButtonModel("musica-da-epoca", "Música da Época", "/sounds/musica-de-epoca.mp3"),
   new SoundButtonModel("estalagem", "Estalagem", "/sounds/estalagem.mp3"),
+  new SoundButtonModel("musica-casamento", "Música Casamento", "/sounds/musica-casamento.mp3"),
 ];
 
 function App() {
