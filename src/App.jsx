@@ -36,6 +36,7 @@ const SOUND_BUTTONS = [
   new SoundButtonModel("jesus-aparece-na-agua", "Jesus Aparece na Água", "/sounds/jesus-aparece-na-agua.mp3"),
   new SoundButtonModel("mulher-lava-os-pes-jesus", "Mulher lava os pés de Jesus", "/sounds/mulher-lava-os-pes-jesus.mp3"),
   new SoundButtonModel("jesus-sermao-fariseu", "Jesus Sermão Fariseu", "/sounds/jesus-sermao-fariseu.mp3"),
+  new SoundButtonModel("marta-e-maria", "Marta e Maria", "/sounds/marta-maria.mp3"),
   new SoundButtonModel("marta-e-maria-discurso-jesus", "Marta e Maria Discurso Jesus", "/sounds/marta-e-maria.mp3"),
   new SoundButtonModel("quebro-meu-vaso", "Quebro meu vaso", "/sounds/quebro-meu-vaso.webm"),
   new SoundButtonModel("santa-ceia", "Santa Ceia", "/sounds/santa-ceia.mp3"),
