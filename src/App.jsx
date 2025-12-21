@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import "./App.css";
+import { useRef, useState } from 'react';
+import './App.css';
 
 // Classe model
 class SoundButtonModel {
@@ -17,32 +17,101 @@ class SoundButtonModel {
 }
 
 const SOUND_BUTTONS = [
-  new SoundButtonModel("introducao-natal", "Introdução Natal", "/sounds/intro-cena-1-v2.mp3"),
-  new SoundButtonModel("filho-pai-natal", "Filho e pai discutindo no Natal", "/sounds/filho-pai-natal.mp3"),
-  new SoundButtonModel("acordando-na-epoca", "Acordando na época", "/sounds/acordando-na-epoca.mp3"),
-  new SoundButtonModel("pessoas-conversando", "Pessoas Conversando", "/sounds/pessoas-conversando.mp3"),
-  new SoundButtonModel("anjos", "Anjos", "/sounds/anjos.mp3"),
-  new SoundButtonModel("anjo-aparece-maria", "Anjo Aparece Maria", "/sounds/anjo-aparece-maria.mp3"),
-  new SoundButtonModel("musica-das-criancas", "Música das Crianças", "/sounds/musica-das-criancas.mp3"),
-  new SoundButtonModel("procurando-quarto", "Procurando Quarto", "/sounds/procurando-quarto.mp3"),
-  new SoundButtonModel("estalagem", "Estalagem", "/sounds/estalagem.mp3"),
-  new SoundButtonModel("jesus-crianca", "Jesus Criança", "/sounds/jesus-crianca.mp3"),
-  new SoundButtonModel("criancas-brincando", "Crianças Brincando", "/sounds/criancas-brincando.mp3"),
-  new SoundButtonModel("jesus-ensinando-no-templo", "Jesus ensina no Templo", "/sounds/jesus-no-templo.mp3"),
-  new SoundButtonModel("musica-casamento", "Música Casamento", "/sounds/musica-casamento.mp3"),
-  new SoundButtonModel("milagre-do-casamento", "Milagre do Casamento", "/sounds/milagre-do-casamento.mp3"),
-  new SoundButtonModel("tempestade", "Tempestade", "/sounds/tempestade.mp3"),
-  new SoundButtonModel("ventos", "Ventos", "/sounds/ventos.mp3"),
-  new SoundButtonModel("jesus-aparece-na-agua", "Jesus Aparece na Água", "/sounds/jesus-aparece-na-agua.mp3"),
-  new SoundButtonModel("mulher-lava-os-pes-jesus", "Mulher lava os pés de Jesus", "/sounds/mulher-lava-os-pes-jesus.mp3"),
-  new SoundButtonModel("jesus-sermao-fariseu", "Jesus Sermão Fariseu", "/sounds/jesus-sermao-fariseu.mp3"),
-  new SoundButtonModel("marta-e-maria", "Marta e Maria", "/sounds/marta-maria.mp3"),
-  new SoundButtonModel("marta-e-maria-discurso-jesus", "Marta e Maria Discurso Jesus", "/sounds/marta-e-maria.mp3"),
-  new SoundButtonModel("quebro-meu-vaso", "Quebro meu vaso", "/sounds/quebro-meu-vaso.webm"),
-  new SoundButtonModel("santa-ceia", "Santa Ceia", "/sounds/santa-ceia.mp3"),
-  new SoundButtonModel("jesus-calvario", "Jesus orando no Getsêmani", "/sounds/jesus-calvario.mp3"),
-  new SoundButtonModel("soldados-no-getsemani", "Soldados no Getsêmani", "/sounds/soldados-no-getsemani.mp3"),
-  new SoundButtonModel("cena-cruz", "Cena Cruz", "/sounds/cena-cruz.mp3"),
+  new SoundButtonModel(
+    'musica-das-criancas',
+    'Música das Crianças',
+    '/sounds/musica-das-criancas.mp3'
+  ),
+  new SoundButtonModel(
+    'introducao-natal',
+    'Introdução Natal',
+    '/sounds/intro-cena-1-v2.mp3'
+  ),
+  new SoundButtonModel(
+    'filho-pai-natal',
+    'Filho e pai discutindo no Natal',
+    '/sounds/filho-pai-natal.mp3'
+  ),
+  new SoundButtonModel(
+    'acordando-na-epoca',
+    'Acordando na época',
+    '/sounds/acordando-na-epoca.mp3'
+  ),
+  new SoundButtonModel(
+    'anjo-aparece-maria',
+    'Anjo Aparece Maria',
+    '/sounds/anjo-aparece-maria.mp3'
+  ),
+  new SoundButtonModel(
+    'procurando-quarto',
+    'Procurando Quarto',
+    '/sounds/procurando-quarto.mp3'
+  ),
+  new SoundButtonModel(
+    'jesus-crianca',
+    'Jesus Criança',
+    '/sounds/jesus-crianca.mp3'
+  ),
+  new SoundButtonModel(
+    'jesus-ensinando-no-templo',
+    'Jesus ensina no Templo',
+    '/sounds/jesus-no-templo.mp3'
+  ),
+  new SoundButtonModel(
+    'musica-casamento',
+    'Música Casamento',
+    '/sounds/musica-casamento.mp3'
+  ),
+  new SoundButtonModel(
+    'milagre-do-casamento',
+    'Milagre do Casamento',
+    '/sounds/milagre-do-casamento.mp3'
+  ),
+  new SoundButtonModel('tempestade', 'Tempestade', '/sounds/tempestade.mp3'),
+  new SoundButtonModel('ventos', 'Ventos', '/sounds/ventos.mp3'),
+  new SoundButtonModel(
+    'jesus-aparece-na-agua',
+    'Jesus Aparece na Água',
+    '/sounds/jesus-aparece-na-agua.mp3'
+  ),
+  new SoundButtonModel(
+    'mulher-lava-os-pes-jesus',
+    'Mulher lava os pés de Jesus',
+    '/sounds/mulher-lava-os-pes-jesus.mp3'
+  ),
+  new SoundButtonModel(
+    'jesus-sermao-fariseu',
+    'Jesus Sermão Fariseu',
+    '/sounds/jesus-sermao-fariseu.mp3'
+  ),
+  new SoundButtonModel(
+    'marta-e-maria',
+    'Marta e Maria',
+    '/sounds/marta-maria.mp3'
+  ),
+  new SoundButtonModel(
+    'marta-e-maria-discurso-jesus',
+    'Marta e Maria Discurso Jesus',
+    '/sounds/marta-e-maria.mp3'
+  ),
+  new SoundButtonModel(
+    'quebro-meu-vaso',
+    'Quebro meu vaso',
+    '/sounds/quebro-meu-vaso.webm'
+  ),
+  new SoundButtonModel('santa-ceia', 'Santa Ceia', '/sounds/santa-ceia.mp3'),
+  new SoundButtonModel(
+    'jesus-calvario',
+    'Jesus orando no Getsêmani',
+    '/sounds/jesus-calvario.mp3'
+  ),
+  new SoundButtonModel(
+    'soldados-no-getsemani',
+    'Soldados no Getsêmani',
+    '/sounds/soldados-no-getsemani.mp3'
+  ),
+  new SoundButtonModel('isaias-53', 'Isaias 53', '/sounds/isaias-53.mp3'),
+  new SoundButtonModel('cena-cruz', 'Cena Cruz', '/sounds/cena-cruz.mp3')
 ];
 
 function App() {
@@ -53,7 +122,7 @@ function App() {
   // Mapa id -> number (volume de 0 a 1)
   const [volumeMap, setVolumeMap] = useState({});
 
-  const toggleSound = (button) => {
+  const toggleSound = button => {
     const { id, asset } = button;
 
     // Se ainda não existe Audio para esse botão, cria
@@ -71,16 +140,16 @@ function App() {
       audio.play();
       audio.loop = true;
 
-      setPlayingMap((prev) => ({
+      setPlayingMap(prev => ({
         ...prev,
-        [id]: true,
+        [id]: true
       }));
 
       // Quando o áudio terminar sozinho, marca como parado
       audio.onended = () => {
-        setPlayingMap((prev) => ({
+        setPlayingMap(prev => ({
           ...prev,
-          [id]: false,
+          [id]: false
         }));
       };
     } else {
@@ -103,29 +172,29 @@ function App() {
         }
       }, fadeOutInterval);
 
-      setPlayingMap((prev) => ({
+      setPlayingMap(prev => ({
         ...prev,
-        [id]: false,
+        [id]: false
       }));
 
       return; // Não executa o pause imediato abaixo
-    //   audio.pause();
-    //   audio.currentTime = 0;
-    //   setPlayingMap((prev) => ({
-    //     ...prev,
-    //     [id]: false,
-    //   }));
-    // }
-  };
+      //   audio.pause();
+      //   audio.currentTime = 0;
+      //   setPlayingMap((prev) => ({
+      //     ...prev,
+      //     [id]: false,
+      //   }));
+      // }
+    }
   };
 
   const handleVolumeChange = (id, newVolume) => {
     const volume = parseFloat(newVolume);
-    
+
     // Atualiza o estado do volume
-    setVolumeMap((prev) => ({
+    setVolumeMap(prev => ({
       ...prev,
-      [id]: volume,
+      [id]: volume
     }));
 
     // Atualiza o volume do áudio se existir
@@ -138,22 +207,20 @@ function App() {
     <div className="page">
       <h1>Sons da Cantata de Natal</h1>
       <div className="grid">
-        {SOUND_BUTTONS.map((button) => {
+        {SOUND_BUTTONS.map(button => {
           const isPlaying = !!playingMap[button.id];
           const volume = volumeMap[button.id] ?? 1;
-          
+
           return (
             <div key={button.id} className="sound-button-container">
               <button
-                className={`sound-button ${isPlaying ? "playing" : ""}`}
+                className={`sound-button ${isPlaying ? 'playing' : ''}`}
                 onClick={() => toggleSound(button)}
               >
                 <span className="label">{button.name}</span>
-                <span className="status">
-                  {isPlaying ? "Parar" : "Tocar"}
-                </span>
+                <span className="status">{isPlaying ? 'Parar' : 'Tocar'}</span>
               </button>
-              
+
               {isPlaying && (
                 <div className="volume-control">
                   <span className="volume-icon">🔊</span>
@@ -163,11 +230,15 @@ function App() {
                     max="1"
                     step="0.01"
                     value={volume}
-                    onChange={(e) => handleVolumeChange(button.id, e.target.value)}
-                    onClick={(e) => e.stopPropagation()}
+                    onChange={e =>
+                      handleVolumeChange(button.id, e.target.value)
+                    }
+                    onClick={e => e.stopPropagation()}
                     className="volume-slider"
                   />
-                  <span className="volume-value">{Math.round(volume * 100)}%</span>
+                  <span className="volume-value">
+                    {Math.round(volume * 100)}%
+                  </span>
                 </div>
               )}
             </div>
